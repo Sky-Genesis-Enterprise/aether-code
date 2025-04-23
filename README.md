@@ -21,7 +21,7 @@
 
 ### Installation steps
 
-1. **Run the repository
+1. **Run the repository**
 
    ```bash
    git clone https://github.com/Sky-Genesis-Enterprise/aether-code.git
