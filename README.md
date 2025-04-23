@@ -76,7 +76,7 @@
 
 We welcome contributions from the community! To contribute to Aether Code, follow these steps:
 
-1. **Fork the Deposit
+1. **Fork the Deposit**
 
    Fork the repository on your GitHub account.
 
@@ -94,7 +94,7 @@ We welcome contributions from the community! To contribute to Aether Code, follo
    git commit -am 'Add a new feature
    ```
 
-4. **Push Modifications
+4. **Push Modifications**
 
    ```bash
    git push origin feature/new-feature
@@ -115,12 +115,3 @@ If you have any questions or suggestions, please don't hesitate to contact us at
 ---
 
 Thank you for using Aether Code! We hope you enjoy this platform as much as we enjoyed developing it.
-```
-
-### Instructions for using this README
-
-1. **Replace Placeholders**: Replace placeholders such as `your-organization`, `your_secret_jwt`, and `votre-email@example.com` with the appropriate information for your project.
-2. **Add Logo**: If you have a logo for your project, replace `path/to/logo.png` with the correct path to your logo.
-3. **Add Additional Sections**: If necessary, add additional sections for information specific to your project, such as screenshots, examples of use, or technical details.
-
-By following these instructions, you'll have a complete and informative `README.md` file for your “Aether Code” GitHub repository. If you have any questions or need further help, please don't hesitate to ask!
