@@ -23,7 +23,7 @@
 
 1. **Run the repository
 
-   bash
+   ```bash
    git clone https://github.com/Sky-Genesis-Enterprise/aether-code.git
    cd aether-code
    ```
