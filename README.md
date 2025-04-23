@@ -82,7 +82,7 @@ We welcome contributions from the community! To contribute to Aether Code, follo
 
 2. **Create a Branch**
 
-   bash
+   ```bash
    git checkout -b feature/new-feature
    ```
 
