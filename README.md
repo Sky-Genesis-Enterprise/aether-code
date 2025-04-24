@@ -59,6 +59,60 @@
 
    Open your browser and go to http://localhost:3000.
 
+## Electron
+
+Aether Code includes an **Electron** wrapper for a desktop application experience.
+
+### Running the Electron App
+
+1. Navigate to the `electron` folder:
+
+   ```bash
+   cd electron
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the Electron app:
+
+   ```bash
+   npm start
+   ```
+
+4. The desktop application will launch, providing the same functionality as the web version.
+
+## Docker
+
+Aether Code can also be run using Docker for easier deployment.
+
+### Using Docker
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t aether-code .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -p 3000:3000 --env-file .env aether-code
+   ```
+
+3. Alternatively, use `docker-compose` for a multi-container setup (e.g., with PostgreSQL):
+
+   ```bash
+   docker-compose up --build
+   ```
+
+4. Access the application at [http://localhost:3000](http://localhost:3000).
+
+---
+
 ## Use
 
 ### Registration and Login
@@ -91,7 +145,7 @@ We welcome contributions from the community! To contribute to Aether Code, follo
    Make your changes and commit them.
 
    ```bash
-   git commit -am 'Add a new feature
+   git commit -am 'Add a new feature'
    ```
 
 4. **Push Modifications**
