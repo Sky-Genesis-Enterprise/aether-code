@@ -1,8 +1,15 @@
 {
+  "license": "Apache license 2.0",
+  "description": "Aether Code is a web-based IDE that allows you to write, run, and debug code in your browser. It supports multiple programming languages and provides a collaborative environment for developers.",
+  "author": "Sky Genesis Enterprise",
   "name": "react-vite-tailwind",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "contact": {
+    "email": "contact@skygenesisenterprise.com",
+    "url": "https://skygenesisenterprise.com"
+  },
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build --outDir dist",
