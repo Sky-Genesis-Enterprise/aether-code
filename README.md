@@ -113,6 +113,123 @@ Aether Code can also be run using Docker for easier deployment.
 
 ---
 
+## Deployment
+
+Aether Code peut être déployé localement ou sur un serveur en utilisant des scripts d'installation pour automatiser le processus. Voici les étapes pour déployer l'application sous forme de service.
+
+### Déploiement local (Linux/Windows)
+
+1. **Exécuter le script d'installation**
+
+   Le script `install.sh` configure l'application pour qu'elle s'exécute en tant que service `systemd`.
+
+   ```bash
+   chmod +x install.sh
+   ./install.sh
+   ```
+
+2. **Vérifier le statut du service**
+
+   Une fois le script exécuté, le service sera démarré automatiquement. Vous pouvez vérifier son statut avec :
+
+   ```bash
+   sudo systemctl status aether-code
+   ```
+
+3. **Arrêter ou redémarrer le service**
+
+   - Pour arrêter le service :
+     ```bash
+     sudo systemctl stop aether-code
+     ```
+
+   - Pour redémarrer le service :
+     ```bash
+     sudo systemctl restart aether-code
+     ```
+
+4. **Accéder à l'application**
+
+   Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
+
+---
+
+### Déploiement local (Windows)
+
+1. **Exécuter le script d'installation**
+
+   Le script `install.bat` configure l'application pour qu'elle s'exécute en tant que service Windows à l'aide de `nssm`.
+
+   Double-cliquez sur le fichier `install.bat` ou exécutez-le dans un terminal :
+
+   ```cmd
+   install.bat
+   ```
+
+2. **Vérifier le service**
+
+   Une fois le script exécuté, le service sera démarré automatiquement. Vous pouvez vérifier son statut dans le gestionnaire de services Windows (`services.msc`).
+
+3. **Arrêter ou redémarrer le service**
+
+   Utilisez `nssm` pour gérer le service :
+
+   - Pour arrêter le service :
+     ```cmd
+     nssm stop AetherCodeService
+     ```
+
+   - Pour redémarrer le service :
+     ```cmd
+     nssm restart AetherCodeService
+     ```
+
+4. **Accéder à l'application**
+
+   Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
+
+---
+
+### Déploiement avec Docker
+
+1. **Construire l'image Docker**
+
+   Utilisez le script `docker:build` pour construire l'image Docker de l'application :
+
+   ```bash
+   npm run docker:build
+   ```
+
+2. **Exécuter le conteneur Docker**
+
+   Lancez le conteneur Docker avec le script `docker:run` :
+
+   ```bash
+   npm run docker:run
+   ```
+
+3. **Déploiement multi-conteneurs avec Docker Compose**
+
+   Si vous utilisez une base de données PostgreSQL, utilisez `docker-compose` pour déployer l'application et la base de données ensemble :
+
+   ```bash
+   npm run docker:compose
+   ```
+
+4. **Accéder à l'application**
+
+   Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
+
+---
+
+### Notes importantes
+
+- Assurez-vous que les fichiers `.env` contiennent les bonnes configurations pour votre environnement (base de données, JWT, etc.).
+- Pour un déploiement en production, configurez un proxy inverse comme **Nginx** ou **Apache** pour gérer les connexions HTTPS et le routage.
+- Sur un serveur distant, ouvrez les ports nécessaires (par exemple, 3000) dans le pare-feu.
+
+---
+
 ## Use
 
 ### Registration and Login
