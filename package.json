@@ -8,7 +8,12 @@
     "build": "tsc -b && vite build --outDir dist",
     "lint": "bunx biome lint --write && bunx tsc --noEmit",
     "format": "bunx biome format --write",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron:dev": "cd electron && npm install && npm start",
+    "electron:build": "cd electron && npm install && electron-builder",
+    "docker:build": "docker build -t aether-code .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env aether-code",
+    "docker:compose": "docker-compose up --build"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.5",
