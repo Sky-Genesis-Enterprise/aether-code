@@ -4,7 +4,7 @@
 
 ## Features
 
-- **Repository Management**: Easily create, clone and manage code repositories.
+- **Repository Management**: Easily create, clone, and manage code repositories.
 - **Version Control**: Use Git for version control.
 - **Collaboration**: Invite collaborators, manage permissions, and track contributions.
 - **Intuitive User Interface**: Browse your repositories, view commits, and more.
@@ -21,7 +21,7 @@
 
 ### Installation steps
 
-1. **Run the repository**
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/Sky-Genesis-Enterprise/aether-code.git
@@ -43,21 +43,23 @@
    JWT_SECRET=your_secret_jwt
    ```
 
-4. **Migrate database**
+4. **Migrate the database**
 
    ```bash
    npm run migrate
    ```
 
-5. **Start Server**
+5. **Start the server**
 
    ```bash
    npm start
    ```
 
-6. **Access the Application**
+6. **Access the application**
 
-   Open your browser and go to http://localhost:3000.
+   Open your browser and go to [http://localhost:3000](http://localhost:3000).
+
+---
 
 ## Electron
 
@@ -84,6 +86,8 @@ Aether Code includes an **Electron** wrapper for a desktop application experienc
    ```
 
 4. The desktop application will launch, providing the same functionality as the web version.
+
+---
 
 ## Docker
 
@@ -115,139 +119,141 @@ Aether Code can also be run using Docker for easier deployment.
 
 ## Deployment
 
-Aether Code peut être déployé localement ou sur un serveur en utilisant des scripts d'installation pour automatiser le processus. Voici les étapes pour déployer l'application sous forme de service.
+Aether Code can be deployed locally or on a server using installation scripts to automate the process. Below are the steps to deploy the application as a service.
 
-### Déploiement local (Linux/Windows)
+### Local Deployment (Linux/macOS)
 
-1. **Exécuter le script d'installation**
+1. **Run the installation script**
 
-   Le script `install.sh` configure l'application pour qu'elle s'exécute en tant que service `systemd`.
+   The `install.sh` script configures the application to run as a `systemd` service.
 
    ```bash
    chmod +x install.sh
    ./install.sh
    ```
 
-2. **Vérifier le statut du service**
+2. **Check the service status**
 
-   Une fois le script exécuté, le service sera démarré automatiquement. Vous pouvez vérifier son statut avec :
+   Once the script is executed, the service will start automatically. You can check its status with:
 
    ```bash
    sudo systemctl status aether-code
    ```
 
-3. **Arrêter ou redémarrer le service**
+3. **Stop or restart the service**
 
-   - Pour arrêter le service :
+   - To stop the service:
      ```bash
      sudo systemctl stop aether-code
      ```
 
-   - Pour redémarrer le service :
+   - To restart the service:
      ```bash
      sudo systemctl restart aether-code
      ```
 
-4. **Accéder à l'application**
+4. **Access the application**
 
-   Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
+   Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
 ---
 
-### Déploiement local (Windows)
+### Local Deployment (Windows)
 
-1. **Exécuter le script d'installation**
+1. **Run the installation script**
 
-   Le script `install.bat` configure l'application pour qu'elle s'exécute en tant que service Windows à l'aide de `nssm`.
+   The `install.bat` script configures the application to run as a Windows service using `nssm`.
 
-   Double-cliquez sur le fichier `install.bat` ou exécutez-le dans un terminal :
+   Double-click the `install.bat` file or run it in a terminal:
 
    ```cmd
    install.bat
    ```
 
-2. **Vérifier le service**
+2. **Check the service**
 
-   Une fois le script exécuté, le service sera démarré automatiquement. Vous pouvez vérifier son statut dans le gestionnaire de services Windows (`services.msc`).
+   Once the script is executed, the service will start automatically. You can check its status in the Windows Service Manager (`services.msc`).
 
-3. **Arrêter ou redémarrer le service**
+3. **Stop or restart the service**
 
-   Utilisez `nssm` pour gérer le service :
+   Use `nssm` to manage the service:
 
-   - Pour arrêter le service :
+   - To stop the service:
      ```cmd
      nssm stop AetherCodeService
      ```
 
-   - Pour redémarrer le service :
+   - To restart the service:
      ```cmd
      nssm restart AetherCodeService
      ```
 
-4. **Accéder à l'application**
+4. **Access the application**
 
-   Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
+   Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
 ---
 
-### Déploiement avec Docker
+### Deployment with Docker
 
-1. **Construire l'image Docker**
+1. **Build the Docker image**
 
-   Utilisez le script `docker:build` pour construire l'image Docker de l'application :
+   Use the `docker:build` script to build the Docker image for the application:
 
    ```bash
    npm run docker:build
    ```
 
-2. **Exécuter le conteneur Docker**
+2. **Run the Docker container**
 
-   Lancez le conteneur Docker avec le script `docker:run` :
+   Start the Docker container using the `docker:run` script:
 
    ```bash
    npm run docker:run
    ```
 
-3. **Déploiement multi-conteneurs avec Docker Compose**
+3. **Multi-container deployment with Docker Compose**
 
-   Si vous utilisez une base de données PostgreSQL, utilisez `docker-compose` pour déployer l'application et la base de données ensemble :
+   If you are using a PostgreSQL database, use `docker-compose` to deploy the application and the database together:
 
    ```bash
    npm run docker:compose
    ```
 
-4. **Accéder à l'application**
+4. **Access the application**
 
-   Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
-
----
-
-### Notes importantes
-
-- Assurez-vous que les fichiers `.env` contiennent les bonnes configurations pour votre environnement (base de données, JWT, etc.).
-- Pour un déploiement en production, configurez un proxy inverse comme **Nginx** ou **Apache** pour gérer les connexions HTTPS et le routage.
-- Sur un serveur distant, ouvrez les ports nécessaires (par exemple, 3000) dans le pare-feu.
+   Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## Use
+### Important Notes
+
+- Ensure that the `.env` file contains the correct configurations for your environment (database, JWT, etc.).
+- For production deployment, configure a reverse proxy like **Nginx** or **Apache** to handle HTTPS connections and routing.
+- On a remote server, open the necessary ports (e.g., 3000) in the firewall.
+
+---
+
+## Usage
 
 ### Registration and Login
 
 - **Registration**: Create an account using the user interface or API.
 - **Login**: Log in with your credentials to access your dashboard.
 
-### Deposit Management
+### Repository Management
 
 - **Create a Repository**: Use the user interface or API to create a new repository.
-- **Cloning a Repository**: Clone an existing repository using Git.
+- **Clone a Repository**: Clone an existing repository using Git.
 - **Manage Collaborators**: Invite collaborators and manage their permissions.
+
+---
 
 ## Contribution
 
 We welcome contributions from the community! To contribute to Aether Code, follow these steps:
 
-1. **Fork the Deposit**
+1. **Fork the Repository**
 
    Fork the repository on your GitHub account.
 
@@ -257,7 +263,7 @@ We welcome contributions from the community! To contribute to Aether Code, follo
    git checkout -b feature/new-feature
    ```
 
-3. **Make Modifications**
+3. **Make Changes**
 
    Make your changes and commit them.
 
@@ -265,7 +271,7 @@ We welcome contributions from the community! To contribute to Aether Code, follo
    git commit -am 'Add a new feature'
    ```
 
-4. **Push Modifications**
+4. **Push Changes**
 
    ```bash
    git push origin feature/new-feature
@@ -275,9 +281,13 @@ We welcome contributions from the community! To contribute to Aether Code, follo
 
    Open a pull request on the original repository and describe your changes.
 
+---
+
 ## Contact
 
 If you have any questions or suggestions, please don't hesitate to contact us at [contact@skygenesisenterprise.com](mailto:contact@skygenesisenterprise.com).
+
+---
 
 ## License
 
