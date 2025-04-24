@@ -4,12 +4,12 @@
 
 ## Features
 
-- Repository Management**: Easily create, clone and manage code repositories.
-- Version Control**: Use Git for version control.
-- Collaboration**: Invite collaborators, manage permissions, and track contributions.
-- Intuitive User Interface**: Browse your repositories, view commits, and more.
-- Complete API**: Interact with the platform via a RESTful API.
-- Security**: Secure authentication and permissions management.
+- **Repository Management**: Easily create, clone and manage code repositories.
+- **Version Control**: Use Git for version control.
+- **Collaboration**: Invite collaborators, manage permissions, and track contributions.
+- **Intuitive User Interface**: Browse your repositories, view commits, and more.
+- **Complete API**: Interact with the platform via a RESTful API.
+- **Security**: Secure authentication and permissions management.
 
 ## Installation
 
@@ -34,7 +34,7 @@
    npm install
    ```
 
-3. **Configure the database** ``.
+3. **Configure the database**
 
    Create a `.env` file at the root of the project and add the necessary environment variables:
 
@@ -63,8 +63,8 @@
 
 ### Registration and Login
 
-- Registration**: Create an account using the user interface or API.
-- Login**: Log in with your credentials to access your dashboard.
+- **Registration**: Create an account using the user interface or API.
+- **Login**: Log in with your credentials to access your dashboard.
 
 ### Deposit Management
 
@@ -104,14 +104,10 @@ We welcome contributions from the community! To contribute to Aether Code, follo
 
    Open a pull request on the original repository and describe your changes.
 
-## License
-
-This project is licensed under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 If you have any questions or suggestions, please don't hesitate to contact us at [contact@skygenesisenterprise.com](mailto:contact@skygenesisenterprise.com).
 
----
+## License
 
-Thank you for using Aether Code! We hope you enjoy this platform as much as we enjoyed developing it.
+This project is licensed under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
