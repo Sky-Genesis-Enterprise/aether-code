@@ -59,3 +59,11 @@ coverage/
 # Docker
 *.env
 docker-compose.override.yml
+
+# Node.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
