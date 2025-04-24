@@ -1,0 +1,12 @@
+{
+  "appName": "Aether Code",
+  "port": 3000,
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "user",
+    "password": "password",
+    "name": "aether_code"
+  },
+  "jwtSecret": "your-secret-key"
+}
